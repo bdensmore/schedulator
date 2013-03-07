@@ -1,0 +1,12 @@
+= simple_form_for(@season, html: { class: 'form-horizontal' } ) do |f|
+	= f.error_notification
+	
+	.form-inputs
+		.control-group
+			= f.label :name, 'Season', { class: 'control-label'}
+			.controls
+				= f.select :name, options_for_select(@seasons), prompt: "Please select a season"
+
+		.control-group
+			.controls
+				= f.button :submit

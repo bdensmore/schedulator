@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @team.name
+%p
+  %b Player count:
+  = @team.player_count
+%p
+  %b Is paid:
+  = @team.is_paid
+
+= link_to 'Edit', edit_team_path(@team)
+\|
+= link_to 'Back', teams_path
